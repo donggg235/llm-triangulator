@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci
+      - run: npm install
       - run: npm run build-data
       - name: Commit & push data changes
         uses: stefanzweifel/git-auto-commit-action@v5
