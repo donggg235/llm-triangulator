@@ -1,0 +1,6 @@
+{
+  "lmarena_csv_url": "PASTE_LMARENA_CSV_RAW_URL_HERE",
+  "helm_json_urls": [
+    // Example: "https://crfm.stanford.edu/helm/classic/v0.3.0/data/summarization_xsum.json"
+  ]
+}
