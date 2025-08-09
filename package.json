@@ -1,0 +1,11 @@
+{
+  "name": "llm-triangulator",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build-data": "node fetch_sources.mjs"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.6"
+  }
+}
