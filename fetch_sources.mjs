@@ -59,7 +59,7 @@ async function fetchLMArena() {
 async function fetchHFOLLv2() {
   const out = [];
   try {
-    const endpoint = 'https://datasets-server.huggingface.co/rows?dataset=open-llm-leaderboard%2Fresults&config=default&split=train&offset=0&length=2000';
+    const endpoint = 'https://datasets-server.huggingface.co/rows?dataset=open-llm-leaderboard%2Fresults&config=default&split=train&offset=0&length=200';
     const j = await okJSON(endpoint);
     for (const row of j.rows || []) {
       const r = row.row || row;
