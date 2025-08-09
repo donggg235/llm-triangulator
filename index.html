@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>LLM Leaderboard Triangulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font: 14px system-ui, sans-serif; margin: 20px; }
+    header { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .pill { padding:6px 10px; border:1px solid #ccc; border-radius:20px; cursor:pointer; }
+    table { border-collapse: collapse; width: 100%; margin-top: 16px; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { text-align:left; }
+    .muted { color:#666; font-size:12px; }
+  </style>
+</head>
+<body>
+  <h1>LLM Leaderboard Triangulator</h1>
+  <div class="muted" id="stamp">Loading…</div>
+
+  <header>
+    <strong>Sources:</strong>
+    <label class="pill"><input type="checkbox" class="src" value="lmarena" checked> LMArena</label>
+    <label class="pill"><input type="checkbox" class="src" value="hf_oll_v2" checked> HF OLL v2</label>
+    <label class="pill"><input type="checkbox" class="src" value="helm"> HELM (if configured)</label>
+  </header>
+
+  <header style="margin-top:8px;">
+    <strong>Benchmarks:</strong>
+    <label class="pill"><input type="checkbox" class="bench" value="Arena Elo" checked> Arena Elo</label>
+    <label class="pill"><input type="checkbox" class="bench" value="MT-Bench" checked> MT-Bench</label>
+    <label class="pill"><input type="checkbox" class="bench" value="gsm8k" checked> GSM8K</label>
+    <label class="pill"><input type="checkbox" class="bench" value="mmlu" checked> MMLU</label>
+    <label class="pill"><input type="checkbox" class="bench" value="hellaswag" checked> HellaSwag</label>
+    <label class="pill"><input type="checkbox" class="bench" value="arc_c" checked> ARC-C</label>
+  </header>
+
+  <table id="tbl">
+    <thead>
+      <tr>
+        <th>Model</th><th>Benchmark</th><th>Metric</th><th>Score</th><th>Source</th><th>Link</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
