@@ -1,0 +1,29 @@
+name: Fetch Leaderboards
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "17 */6 * * *"  # every 6 hours, at minute 17
+  push:
+    paths:
+      - "fetch_sources.mjs"
+      - "package.json"
+      - "config.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # let the action commit the updated JSON
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm run build-data
+      - name: Commit & push data changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh leaderboard data"
+          file_pattern: "data/*.json"
