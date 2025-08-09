@@ -1,6 +1,4 @@
 {
-  "lmarena_csv_url": "https://huggingface.co/spaces/lmarena-ai/lmarena-leaderboard/resolve/main/leaderboard_table_20250804.csv",
-  "helm_json_urls": [
-    // Example: "https://crfm.stanford.edu/helm/classic/v0.3.0/data/summarization_xsum.json"
-  ]
+  "lmarena_csv_url": "https://huggingface.co/spaces/lmarena-ai/lmarena-leaderboard/raw/main/leaderboard_table_20250804.csv",
+  "helm_json_urls": []
 }
